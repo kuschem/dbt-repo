@@ -13,8 +13,6 @@
 -- FROM temperature_daily
 
 
-
-
 WITH temperature_daily AS (
     SELECT ((extracted_data -> 'forecast' -> 'forecastday' -> 0 -> 'date')::VARCHAR)::date  AS date,
         ((extracted_data -> 'forecast' -> 'forecastday' -> 0 -> 'day' -> 'maxtemp_c')::VARCHAR)::FLOAT AS maxtemp_c,
@@ -25,8 +23,8 @@ WITH temperature_daily AS (
         ((extracted_data -> 'forecast' -> 'forecastday' -> 0 -> 'day' -> 'avghumidity')::VARCHAR)::FLOAT AS avghumidity,
         ((extracted_data -> 'forecast' -> 'forecastday' -> 0 -> 'day' -> 'uv')::VARCHAR)::FLOAT AS avguv,
         (extracted_data -> 'forecast' -> 'forecastday' -> 0 -> 'day' -> 'condition' -> 'icon')::VARCHAR AS icon_day,
-        ((extracted_data -> 'forecast' -> 'forecastday' -> 0 -> 'astro' -> 'sunrise')::VARCHAR)::FLOAT AS sunrise,
-        ((extracted_data -> 'forecast' -> 'forecastday' -> 0 -> 'astro' -> 'sunset')::VARCHAR)::FLOAT AS sunset,
+        (extracted_data -> 'forecast' -> 'forecastday' -> 0 -> 'astro' -> 'sunrise')::VARCHAR AS sunrise,
+        (extracted_data -> 'forecast' -> 'forecastday' -> 0 -> 'astro' -> 'sunset')::VARCHAR AS sunset,
         ((extracted_data -> 'forecast' -> 'forecastday' -> 0 -> 'hour' -> 'time')::VARCHAR)::TIMESTAMP AS time,
         ((extracted_data -> 'forecast' -> 'forecastday' -> 0 -> 'hour' -> 'temp_c')::VARCHAR)::FLOAT AS temp_c,
         ((extracted_data -> 'forecast' -> 'forecastday' -> 0 -> 'hour' -> 'precip_mm')::VARCHAR)::FLOAT AS precip_mm,
