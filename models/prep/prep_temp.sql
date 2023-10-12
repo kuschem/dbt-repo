@@ -1,5 +1,5 @@
 with extracted_temp as (
-    SELECT * 
+    SELECT *
     FROM {{ref('staging_weather')}}
 )
 select *
