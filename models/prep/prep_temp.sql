@@ -16,8 +16,6 @@ add_prep_data as (
                 avghumidity,
                 avguv,
                 REPLACE (icon_day, '"', '') as icon_day,
-                REPLACE (sunrise, '"', '') as sunrise,
-                REPLACE (sunset, '"', '') as sunset,
                 REPLACE (city, '"', '') as city,
                 REPLACE (region, '"', '') as region,
                 REPLACE (country, '"', '') as country,
