@@ -25,7 +25,7 @@ add_prep_data as (
                         WHEN lat = 52.75 AND lon = 13.27 THEN  'BioKräuterei'
                         WHEN lat = 52.42 AND lon = 13.01 THEN 'Florahof'
                         WHEN lat = 52.48 AND lon = 14.1 THEN 'Gärtnerei Apfeltraum'
-                        WHEN lat = 52.40 AND lon = 14.27 THEN 'Gärtnerhof an den Heiligen Pfühlen'
+                        WHEN lat = 52.39 AND lon = 14.27 THEN 'Gärtnerhof an den Heiligen Pfühlen'
                         WHEN lat = 53.05 AND lon = 13.53 THEN 'Gärtnerhof Stauden­müller'
                         WHEN lat = 52.98 AND lon = 14.03 THEN 'Hof Schwalbennest'
                         WHEN lat = 51.85 AND lon = 14.18 THEN 'Kleiner Hof im Spreewald'
