@@ -22,7 +22,7 @@ add_prep_data as (
                 REPLACE (country, '"', '') as country,
                 lat,
                 lon,
-                case
+                case -- add names of farms of Förder­ge­mein­schaft Ökologischer Landbau Berlin-Brandenburg e.V.
                         WHEN lat = 52.75 AND lon = 13.27 THEN  'BioKräuterei'
                         WHEN lat = 52.42 AND lon = 13.01 THEN 'Florahof'
                         WHEN lat = 52.48 AND lon = 14.1 THEN 'Gärtnerei Apfeltraum'
